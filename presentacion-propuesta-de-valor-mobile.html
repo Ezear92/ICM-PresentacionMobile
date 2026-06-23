@@ -3,27 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#F4F0E7">
-<title>Propuesta de valor · móvil</title>
+<meta name="theme-color" content="#14120F">
+<title>κατ' ὄναρ · Propuesta de valor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#F4F0E7;
-    --paper:#FCFAF5;
-    --ink:#2B2925;
-    --ink-soft:#6E675C;
-    --ink-faint:#9B9384;
-    --sage:#67795C;
-    --sage-deep:#4E5F45;
-    --sage-tint:#E7EADF;
-    --clay:#AC7752;
-    --clay-tint:#F0E2D4;
-    --line:#E1DACB;
-    --line-soft:#EBE5D8;
-    --shadow:0 1px 2px rgba(43,41,37,.04), 0 8px 22px -14px rgba(43,41,37,.20);
-    --shadow-lg:0 2px 6px rgba(43,41,37,.05), 0 24px 50px -24px rgba(43,41,37,.32);
+    --cream:#14120F;
+    --paper:#1E1B17;
+    --ink:#EDE7DA;
+    --ink-soft:#A09582;
+    --ink-faint:#665E52;
+    --sage:#7A9875;
+    --sage-deep:#5A7A55;
+    --sage-tint:#151D13;
+    --gold:#C9A84C;
+    --gold-deep:#9A7B30;
+    --gold-tint:#252010;
+    --line:#302B25;
+    --line-soft:#261F1A;
+    --shadow:0 1px 2px rgba(0,0,0,.30), 0 8px 22px -14px rgba(0,0,0,.55);
+    --shadow-lg:0 2px 6px rgba(0,0,0,.35), 0 24px 50px -24px rgba(0,0,0,.75);
     --serif:'Fraunces',Georgia,serif;
     --sans:'Hanken Grotesk',system-ui,sans-serif;
   }
@@ -35,18 +36,18 @@
   }
   .bg{position:fixed;inset:0;z-index:0;pointer-events:none;
     background:
-      radial-gradient(70% 50% at 12% 5%, rgba(103,121,92,.10), transparent 70%),
-      radial-gradient(65% 45% at 92% 95%, rgba(172,119,82,.10), transparent 70%);
+      radial-gradient(70% 50% at 12% 5%, rgba(201,168,76,.07), transparent 70%),
+      radial-gradient(65% 45% at 92% 95%, rgba(122,152,117,.07), transparent 70%);
   }
-  .grain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.25;mix-blend-mode:multiply;
+  .grain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.10;mix-blend-mode:screen;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");}
 
   /* progress bar */
-  .progress{position:fixed;top:0;left:0;height:3px;background:var(--clay);z-index:30;transition:width .5s cubic-bezier(.4,0,.1,1)}
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:30;transition:width .5s cubic-bezier(.4,0,.1,1)}
 
   /* brand top */
   .brand{position:fixed;top:14px;left:18px;z-index:30;font-family:var(--serif);font-style:italic;
-    font-size:12px;color:var(--ink-faint);letter-spacing:.01em}
+    font-size:13px;color:var(--gold);letter-spacing:.03em}
 
   /* deck */
   .deck{position:relative;z-index:2;width:100vw;height:100vh;overflow:hidden}
@@ -65,13 +66,13 @@
   /* type */
   .eyebrow{font-size:10.5px;font-weight:600;letter-spacing:.20em;text-transform:uppercase;color:var(--sage);
     display:flex;align-items:center;gap:10px;margin-bottom:14px}
-  .eyebrow::before{content:"";width:20px;height:1.5px;background:var(--clay);display:inline-block}
+  .eyebrow::before{content:"";width:20px;height:1.5px;background:var(--gold);display:inline-block}
   h1{font-family:var(--serif);font-weight:500;line-height:1.06;letter-spacing:-.015em;
     font-size:clamp(30px,8.5vw,42px);color:var(--ink)}
   h2{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spacing:-.01em;
     font-size:clamp(24px,6.5vw,32px);color:var(--ink)}
   .lead{font-size:15px;line-height:1.55;color:var(--ink-soft)}
-  em.hl{font-style:normal;color:var(--sage-deep);font-weight:600}
+  em.hl{font-style:normal;color:var(--sage);font-weight:600}
 
   /* reveal */
   .slide.active .r{animation:rise .55s cubic-bezier(.2,.75,.2,1) backwards}
@@ -80,12 +81,12 @@
 
   /* ---------- COVER ---------- */
   .cover{justify-content:center}
-  .cover .mark{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--clay);
+  .cover .mark{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--gold);
     margin-bottom:20px;line-height:1.4}
   .cover h1{margin:4px 0 18px}
   .cover .sub{font-size:15px;line-height:1.55;color:var(--ink-soft)}
   .cover .foot{margin-top:30px;display:flex;gap:8px;flex-wrap:wrap}
-  .tag{font-size:12px;color:var(--sage-deep);background:var(--sage-tint);border:1px solid #D9DFCF;
+  .tag{font-size:12px;color:var(--sage);background:var(--sage-tint);border:1px solid var(--line);
     padding:5px 11px;border-radius:999px;font-weight:500}
   .cover .swipe{margin-top:36px;font-size:11px;color:var(--ink-faint);letter-spacing:.08em;
     display:flex;align-items:center;gap:8px;opacity:.7}
@@ -95,86 +96,84 @@
   .method-flow{background:var(--paper);border:1px solid var(--line);border-radius:16px;
     padding:18px 16px 14px;box-shadow:var(--shadow);position:relative;margin-top:18px}
   .method-flow-label{position:absolute;top:-9px;left:18px;background:var(--cream);
-    padding:0 8px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);font-weight:600}
+    padding:0 8px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
   .mvflow{position:relative;padding-left:36px}
   .mvflow::before{content:"";position:absolute;left:16px;top:8px;bottom:8px;width:2px;
-    background:linear-gradient(to bottom,var(--clay),var(--sage));border-radius:1px;opacity:.4}
+    background:linear-gradient(to bottom,var(--gold),var(--sage));border-radius:1px;opacity:.4}
   .mstep{position:relative;padding:6px 0 14px;display:flex;align-items:flex-start;gap:10px}
   .mstep:last-child{padding-bottom:2px}
   .mstep::before{content:"";position:absolute;left:-26px;top:10px;width:11px;height:11px;border-radius:50%;
     background:var(--sage-tint);border:2px solid var(--sage);z-index:1}
   .mstep .mico{width:32px;height:32px;border-radius:10px;background:var(--sage-tint);
-    color:var(--sage-deep);display:grid;place-items:center;flex-shrink:0;border:1px solid #D2D9C5}
+    color:var(--sage);display:grid;place-items:center;flex-shrink:0;border:1px solid var(--line)}
   .mstep .mbody{flex:1;padding-top:3px}
   .mstep .mname{font-family:var(--serif);font-size:17px;color:var(--ink);font-weight:500;line-height:1.1;margin-bottom:2px}
   .mstep .mhint{font-family:var(--serif);font-style:italic;font-size:12.5px;color:var(--ink-soft);line-height:1.3}
 
   .axes{display:flex;flex-direction:column;gap:10px;margin-top:18px}
   .axis{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);position:relative}
-  .axis .alab{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);font-weight:600;margin-bottom:3px}
+  .axis .alab{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:3px}
   .axis .aname{font-family:var(--serif);font-size:19px;font-weight:500;color:var(--ink);margin-bottom:5px;line-height:1.1}
   .axis .adesc{font-size:12.5px;line-height:1.5;color:var(--ink-soft)}
-  .axis .adesc b{color:var(--sage-deep);font-weight:600}
+  .axis .adesc b{color:var(--sage);font-weight:600}
 
-  /* ---------- SEÑALES (4 por pantalla) ---------- */
+  /* ---------- SEÑALES ---------- */
   .signals-mobile{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
   .sig{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 11px;
     box-shadow:var(--shadow);display:flex;flex-direction:column;gap:7px}
-  .sig q{font-family:var(--serif);font-style:italic;font-size:12.5px;line-height:1.3;color:var(--ink);quotes:"“" "”"}
+  .sig q{font-family:var(--serif);font-style:italic;font-size:12.5px;line-height:1.3;color:var(--ink);quotes:"\201C" "\201D"}
   .sig .real{font-size:10px;color:var(--ink-faint);letter-spacing:.01em;border-top:1px dashed var(--line);padding-top:6px;line-height:1.3}
-  .sig .sol{font-size:11px;color:var(--sage-deep);font-weight:600;line-height:1.3;margin-top:auto}
-  .sig .sol::before{content:"→ ";color:var(--clay)}
-
-  .signals-note{font-size:11px;color:var(--ink-faint);text-align:right;margin-top:8px;font-style:italic;font-family:var(--serif)}
+  .sig .sol{font-size:11px;color:var(--sage);font-weight:600;line-height:1.3;margin-top:auto}
+  .sig .sol::before{content:"→ ";color:var(--gold)}
 
   /* ---------- AUDIENCIA ---------- */
   .audience-heads{display:flex;flex-direction:column;gap:14px;margin-top:14px;margin-bottom:18px}
-  .ahead{font-family:var(--serif);font-size:16px;font-weight:500;line-height:1.35;color:var(--sage-deep)}
+  .ahead{font-family:var(--serif);font-size:16px;font-weight:500;line-height:1.35;color:var(--sage)}
   .ahead b{color:var(--ink);font-weight:500}
   .profiles-mobile{display:flex;flex-direction:column;gap:12px}
   .prof{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;box-shadow:var(--shadow)}
   .prof .who{font-family:var(--serif);font-size:19px;color:var(--ink);margin-bottom:3px;font-weight:500}
-  .prof .scope{font-size:10.5px;color:var(--clay);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+  .prof .scope{font-size:10.5px;color:var(--gold);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
   .prof p{font-size:13px;line-height:1.5;color:var(--ink-soft)}
-  .prof p b{color:var(--sage-deep);font-weight:600}
+  .prof p b{color:var(--sage);font-weight:600}
 
-  /* ---------- PRODUCTOS (cada uno en su pantalla) ---------- */
+  /* ---------- PRODUCTOS ---------- */
   .pcard{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 20px 20px;
     box-shadow:var(--shadow-lg);margin-top:14px;display:flex;flex-direction:column}
-  .pcard .pname{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin-bottom:6px}
+  .pcard .pname{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
   .pcard .ptitle{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--ink);line-height:1.15;margin-bottom:8px}
-  .pcard .psub{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--sage-deep);line-height:1.4;
+  .pcard .psub{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--sage);line-height:1.4;
     margin-bottom:14px;padding-bottom:12px;border-bottom:1px dashed var(--line)}
   .pcard .pblock{font-size:13px;line-height:1.55;color:var(--ink-soft);margin-bottom:10px}
   .pcard .pblock b{color:var(--ink);font-weight:600}
   .pcard .pclose{margin-top:8px;padding-top:12px;border-top:1px solid var(--line-soft);
-    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--sage-deep);line-height:1.45}
+    font-family:var(--serif);font-style:italic;font-size:13px;color:var(--sage);line-height:1.45}
 
   /* ---------- TECNOLOGÍA ---------- */
   .tech-mobile{display:flex;flex-direction:column;gap:10px;margin-top:16px}
   .tcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 15px;box-shadow:var(--shadow)}
   .tcard h3{font-family:var(--serif);font-size:17px;font-weight:500;color:var(--ink);margin-bottom:2px;line-height:1.1}
-  .tcard .kind{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--clay);font-weight:600;margin-bottom:10px}
+  .tcard .kind{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
   .tline{display:flex;gap:8px;font-size:11.5px;line-height:1.4;margin-bottom:7px}
   .tline:last-child{margin-bottom:0}
   .tline .badge{flex:none;width:16px;height:16px;border-radius:5px;display:grid;place-items:center;font-size:11px;font-weight:700;margin-top:1px}
-  .tline.yes .badge{background:var(--sage-tint);color:var(--sage-deep)}
-  .tline.no .badge{background:var(--clay-tint);color:var(--clay)}
+  .tline.yes .badge{background:var(--sage-tint);color:var(--sage)}
+  .tline.no .badge{background:var(--gold-tint);color:var(--gold)}
   .tline .txt{color:var(--ink-soft)}
   .tline .txt b{color:var(--ink);font-weight:600}
-  .mantra{margin-top:16px;background:var(--sage-deep);color:#F4F0E7;border-radius:14px;padding:14px 18px;
+  .mantra{margin-top:16px;background:var(--sage-deep);color:#EDE7DA;border-radius:14px;padding:14px 18px;
     font-family:var(--serif);font-size:13.5px;line-height:1.45;text-align:center}
-  .mantra b{color:#E9CBAE;font-weight:600}
+  .mantra b{color:var(--gold);font-weight:600}
 
-  /* ---------- CONDICIONES (columna vertical) ---------- */
-  .path-mobile{margin-top:16px;display:flex;flex-direction:column;gap:0;position:relative;padding-left:36px}
-  .path-mobile::before{content:"";position:absolute;left:18px;top:14px;bottom:14px;width:2px;
+  /* ---------- CONDICIONES ---------- */
+  .path-mobile{margin-top:16px;display:flex;flex-direction:column;gap:0;position:relative;padding-left:56px}
+  .path-mobile::before{content:"";position:absolute;left:28px;top:14px;bottom:14px;width:2px;
     background:var(--line)}
   .pstep-m{position:relative;padding:8px 0 14px}
   .pstep-m:last-child{padding-bottom:0}
-  .pnum-m{position:absolute;left:-26px;top:6px;width:32px;height:32px;border-radius:50%;
+  .pnum-m{position:absolute;left:-40px;top:6px;width:32px;height:32px;border-radius:50%;
     background:var(--paper);border:2px solid var(--line);
-    display:grid;place-items:center;font-family:var(--serif);font-size:15px;color:var(--clay);font-weight:500;
+    display:grid;place-items:center;font-family:var(--serif);font-size:15px;color:var(--gold);font-weight:500;
     box-shadow:var(--shadow);z-index:1}
   .pstep-m b{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:3px;line-height:1.25}
   .pstep-m span{font-size:12px;color:var(--ink-soft);line-height:1.45}
@@ -182,22 +181,24 @@
   /* ---------- CTA ---------- */
   .cta-mobile h1{margin:6px 0 14px;font-size:clamp(28px,8vw,36px)}
   .cta-mobile .lead{font-size:14.5px;line-height:1.55}
-  .stepbox{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--clay);
+  .stepbox{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--gold);
     border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
-  .stepbox .lab{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);font-weight:600;margin-bottom:6px}
+  .stepbox .lab{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px}
   .stepbox > p{font-size:13.5px;line-height:1.55;color:var(--ink)}
-  .stepbox > p b{color:var(--sage-deep);font-weight:600}
+  .stepbox > p b{color:var(--sage);font-weight:600}
   .stepbox-details{margin-top:12px;padding-top:11px;border-top:1px dashed var(--line)}
   .stepbox-details .dt{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:5px}
   .stepbox-details p{font-size:12.5px;line-height:1.55;color:var(--ink-soft)}
-  .stepbox-details p b{color:var(--clay);font-weight:600}
+  .stepbox-details p b{color:var(--gold);font-weight:600}
 
   .contact-mobile{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+  .contact-brand{font-family:var(--serif);font-style:italic;font-size:23px;color:var(--gold);
+    font-weight:500;margin-bottom:3px;letter-spacing:.02em;line-height:1.2}
   .contact-name{font-family:var(--serif);font-size:18px;color:var(--ink);font-weight:500;margin-bottom:10px}
   .contact-lines-m{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-soft)}
-  .contact-lines-m a{color:var(--sage-deep);text-decoration:none;font-weight:500;display:inline-block;padding:2px 0}
+  .contact-lines-m a{color:var(--sage);text-decoration:none;font-weight:500;display:inline-block;padding:2px 0}
   .contact-lines-m .row{display:flex;align-items:center;gap:8px}
-  .contact-lines-m .ico{width:14px;height:14px;color:var(--clay);flex:none;opacity:.7}
+  .contact-lines-m .ico{width:14px;height:14px;color:var(--gold);flex:none;opacity:.7}
 
   /* ---------- NAV ---------- */
   .nav{position:fixed;bottom:0;left:0;right:0;z-index:30;height:60px;
@@ -205,21 +206,20 @@
     padding:0 18px;background:linear-gradient(to top,var(--cream) 65%,transparent)}
   .dots{display:flex;gap:6px;align-items:center;flex:1;justify-content:center}
   .dot{width:6px;height:6px;border-radius:3px;background:var(--line);border:none;cursor:pointer;transition:all .3s;padding:0}
-  .dot.on{width:18px;background:var(--sage-deep)}
+  .dot.on{width:18px;background:var(--gold)}
   .arrows{display:flex;align-items:center;gap:6px}
   .arrows .count{font-size:11px;color:var(--ink-soft);font-variant-numeric:tabular-nums;margin-right:4px;font-weight:500}
   .ab{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--paper);cursor:pointer;
     display:grid;place-items:center;color:var(--ink);transition:all .25s;box-shadow:var(--shadow);
     -webkit-appearance:none;appearance:none}
-  .ab:active{background:var(--sage-deep);color:#F4F0E7;border-color:var(--sage-deep);transform:scale(.93)}
+  .ab:active{background:var(--gold);color:var(--cream);border-color:var(--gold);transform:scale(.93)}
   .ab:disabled{opacity:.3;background:var(--paper);color:var(--ink);border-color:var(--line)}
 
-  /* desktop hint (cuando se abre en pantalla ancha) */
   @media (min-width:760px){
     .deck{max-width:430px;margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
     .desktop-hint{position:fixed;top:50%;left:24px;transform:translateY(-50%);max-width:240px;
       font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-faint);line-height:1.5;z-index:20}
-    .desktop-hint::before{content:"";display:block;width:24px;height:1px;background:var(--clay);margin-bottom:10px}
+    .desktop-hint::before{content:"";display:block;width:24px;height:1px;background:var(--gold);margin-bottom:10px}
   }
   @media (max-width:759px){.desktop-hint{display:none}}
 </style>
@@ -228,7 +228,7 @@
 <div class="bg"></div>
 <div class="grain"></div>
 <div class="progress" id="progress"></div>
-<div class="brand">Propuesta de valor</div>
+<div class="brand">κατ' ὄναρ</div>
 
 <div class="desktop-hint">Versión móvil. Mejor experiencia en celular vertical o ventana angosta.</div>
 
@@ -237,8 +237,8 @@
   <!-- 0 · COVER -->
   <section class="slide cover active">
     <div class="mark r" style="--i:0">Una propuesta para industriales, logísticas y áreas administrativas</div>
-    <h1 class="r" style="--i:1">Tu empresa creció.<br>Ahora le toca a los procesos.</h1>
-    <p class="sub r" style="--i:2">Reemplazo planillas y tareas manuales por <em class="hl">procesos trazables, integrados y medibles</em>: automatización, reglas de negocio, lectura de códigos, integración entre sistemas y tableros operativos.</p>
+    <h1 class="r" style="--i:1">Su empresa creció.<br>Ahora le toca a los procesos.</h1>
+    <p class="sub r" style="--i:2">Reemplaza planillas y tareas manuales por <em class="hl">procesos trazables, integrados y medibles</em>: automatización, reglas de negocio, lectura de códigos, integración entre sistemas y tableros operativos.</p>
     <div class="foot r" style="--i:3">
       <span class="tag">Industria</span>
       <span class="tag">Logística</span>
@@ -247,11 +247,11 @@
     <div class="swipe r" style="--i:4">Deslizá para empezar</div>
   </section>
 
-  <!-- 1 · QUÉ HAGO -->
+  <!-- 1 · QUÉ HACE -->
   <section class="slide">
-    <div class="eyebrow r" style="--i:0">01 · Qué hago</div>
-    <h2 class="r" style="--i:1">No programo. Ordeno operaciones.</h2>
-    <p class="lead r" style="--i:2" style="margin-top:10px">Tomo lo que hoy vive en Excel, PDF, correo, WhatsApp o en la cabeza de una persona, y lo llevo a un método de cuatro tiempos:</p>
+    <div class="eyebrow r" style="--i:0">01 · Qué hace</div>
+    <h2 class="r" style="--i:1">No programa. Ordena operaciones.</h2>
+    <p class="lead r" style="--i:2" style="margin-top:10px">Toma lo que hoy vive en Excel, PDF, correo, WhatsApp o en la cabeza de una persona, y lo lleva a un método de cuatro tiempos:</p>
 
     <div class="method-flow r" style="--i:3">
       <span class="method-flow-label">El método</span>
@@ -299,7 +299,7 @@
       <div class="axis r" style="--i:4">
         <div class="alab">Costo</div>
         <div class="aname">Caja</div>
-        <div class="adesc">Cobrás más rápido y bajás los errores que cuestan plata. <b>Menos reproceso, facturación más limpia.</b></div>
+        <div class="adesc">Cobra más rápido y baja los errores que cuestan plata. <b>Menos reproceso, facturación más limpia.</b></div>
       </div>
       <div class="axis r" style="--i:5">
         <div class="alab">Control</div>
@@ -314,34 +314,23 @@
     </div>
   </section>
 
-  <!-- 2 · SEÑALES — parte 1 -->
+  <!-- 2 · SEÑALES (6 en una sola pantalla) -->
   <section class="slide">
-    <div class="eyebrow r" style="--i:0">02 · ¿Te suena? · I</div>
+    <div class="eyebrow r" style="--i:0">02 · ¿Le suena?</div>
     <h2 class="r" style="--i:1">Si algo de esto pasa, hay una oportunidad.</h2>
     <div class="signals-mobile">
       <div class="sig r" style="--i:2"><q>La planilla maestra la maneja una sola persona</q><span class="real">Dependencia del conocimiento de un individuo</span><span class="sol">Sistema con permisos y validaciones</span></div>
-      <div class="sig r" style="--i:3"><q>Acomodamos lotes de hojas impresos por no salir ordenados</q><span class="real">Retrabajo manual de alto volumen</span><span class="sol">Reordenamiento automático con reglas</span></div>
-      <div class="sig r" style="--i:4"><q>Para saber dónde está algo, hay que preguntar</q><span class="real">No hay registro de movimientos</span><span class="sol">QR/RFID/NFC + app + estados</span></div>
-      <div class="sig r" style="--i:5"><q>Facturamos tarde porque hay que revisar varias cosas</q><span class="real">Reglas dispersas, datos sin integrar</span><span class="sol">Motor de reglas + integración</span></div>
-    </div>
-    <div class="signals-note r" style="--i:6">Siguen cuatro más →</div>
-  </section>
-
-  <!-- 3 · SEÑALES — parte 2 -->
-  <section class="slide">
-    <div class="eyebrow r" style="--i:0">02 · ¿Te suena? · II</div>
-    <h2 class="r" style="--i:1">Otras cuatro señales típicas.</h2>
-    <div class="signals-mobile">
-      <div class="sig r" style="--i:2"><q>Cada vez se hace distinto</q><span class="real">El proceso no está estandarizado</span><span class="sol">Flujo, matriz de decisión y trazabilidad</span></div>
-      <div class="sig r" style="--i:3"><q>El reporte de cierre lleva horas o días</q><span class="real">Datos repartidos y sin estandarizar</span><span class="sol">Tablero sobre modelo de eventos</span></div>
-      <div class="sig r" style="--i:4"><q>El error se descubre cuando reclama el cliente</q><span class="real">Falta de trazabilidad y de alertas</span><span class="sol">Validaciones + alertas + auditoría</span></div>
-      <div class="sig r" style="--i:5"><q>Si crecemos un poco más, esto explota</q><span class="real">El proceso no escala</span><span class="sol">Plataforma o capa de integración</span></div>
+      <div class="sig r" style="--i:3"><q>Para saber dónde está algo, hay que preguntar</q><span class="real">No hay registro de movimientos</span><span class="sol">QR/RFID/NFC + app + estados</span></div>
+      <div class="sig r" style="--i:4"><q>Facturamos tarde porque hay que revisar varias cosas</q><span class="real">Reglas dispersas, datos sin integrar</span><span class="sol">Motor de reglas + integración</span></div>
+      <div class="sig r" style="--i:5"><q>Cada vez se hace distinto</q><span class="real">El proceso no está estandarizado</span><span class="sol">Flujo, matriz de decisión y trazabilidad</span></div>
+      <div class="sig r" style="--i:6"><q>El reporte de cierre lleva horas o días</q><span class="real">Datos repartidos y sin estandarizar</span><span class="sol">Tablero sobre modelo de eventos</span></div>
+      <div class="sig r" style="--i:7"><q>El error se descubre cuando reclama el cliente</q><span class="real">Falta de trazabilidad y de alertas</span><span class="sol">Validaciones + alertas + auditoría</span></div>
     </div>
   </section>
 
-  <!-- 4 · AUDIENCIA -->
+  <!-- 3 · AUDIENCIA -->
   <section class="slide">
-    <div class="eyebrow r" style="--i:0">03 · A quién me dirijo</div>
+    <div class="eyebrow r" style="--i:0">03 · A quién se dirige</div>
     <h2 class="r" style="--i:1">PROCESOS que necesitan orden, velocidad y control.</h2>
     <div class="audience-heads">
       <div class="ahead r" style="--i:2"><b>Empresas que crecieron</b> y necesitan orden.</div>
@@ -361,7 +350,7 @@
     </div>
   </section>
 
-  <!-- 5 · SAN JOSÉ -->
+  <!-- 4 · SAN JOSÉ -->
   <section class="slide">
     <div class="eyebrow r" style="--i:0">04 · Producto propio · I</div>
     <h2 class="r" style="--i:1">San José</h2>
@@ -375,7 +364,7 @@
     </div>
   </section>
 
-  <!-- 6 · SANTA RITA -->
+  <!-- 5 · SANTA RITA -->
   <section class="slide">
     <div class="eyebrow r" style="--i:0">04 · Producto propio · II</div>
     <h2 class="r" style="--i:1">Santa Rita</h2>
@@ -389,7 +378,7 @@
     </div>
   </section>
 
-  <!-- 7 · TECNOLOGÍA (solo capa operativa) -->
+  <!-- 6 · TECNOLOGÍA -->
   <section class="slide">
     <div class="eyebrow r" style="--i:0">05 · La tecnología justa</div>
     <h2 class="r" style="--i:1">Primero el problema. Después la herramienta.</h2>
@@ -413,48 +402,48 @@
     <div class="mantra r" style="--i:5">El problema determina la pieza. <b>Esa es la herramienta.</b></div>
   </section>
 
-  <!-- 8 · CONDICIONES -->
+  <!-- 7 · CONDICIONES -->
   <section class="slide">
-    <div class="eyebrow r" style="--i:0">06 · De tu lado</div>
+    <div class="eyebrow r" style="--i:0">06 · De su parte</div>
     <h2 class="r" style="--i:1">Lo que hace que un proyecto así salga bien.</h2>
     <div class="path-mobile">
       <div class="pstep-m r" style="--i:2">
         <div class="pnum-m">1</div>
-        <b>Empezá por un problema, no por una herramienta</b>
-        <span>“Cobrar más rápido” rinde más que “instalar un sistema”.</span>
+        <b>Empezar por un problema, no por una herramienta</b>
+        <span>"Cobrar más rápido" rinde más que "instalar un sistema".</span>
       </div>
       <div class="pstep-m r" style="--i:3">
         <div class="pnum-m">2</div>
-        <b>Tené una línea de base</b>
+        <b>Tener una línea de base</b>
         <span>Hoy: cuánto tiempo, cuántos errores, qué personas y qué demoras.</span>
       </div>
       <div class="pstep-m r" style="--i:4">
         <div class="pnum-m">3</div>
-        <b>Elegí un circuito completo</b>
+        <b>Elegir un circuito completo</b>
         <span>Un proceso de punta a punta vale más que diez parches sueltos.</span>
       </div>
       <div class="pstep-m r" style="--i:5">
         <div class="pnum-m">4</div>
-        <b>Integrá antes de reportar</b>
+        <b>Integrar antes de reportar</b>
         <span>Un tablero sobre datos malos solo maquilla el problema.</span>
       </div>
       <div class="pstep-m r" style="--i:6">
         <div class="pnum-m">5</div>
-        <b>Nombrá un dueño interno del cambio</b>
-        <span>Sin alguien que lo defienda dentro de tu empresa, vuelve la planilla.</span>
+        <b>Nombrar un dueño interno del cambio</b>
+        <span>Sin alguien que lo defienda dentro de la empresa, vuelve la planilla.</span>
       </div>
     </div>
   </section>
 
-  <!-- 9 · CTA -->
+  <!-- 8 · CTA -->
   <section class="slide cta-mobile">
     <div class="eyebrow r" style="--i:0">07 · El siguiente paso</div>
-    <h1 class="r" style="--i:1">Empecemos por un diagnóstico corto.</h1>
-    <p class="lead r" style="--i:2">Si algo de esto describe tu operación, el siguiente paso no es elegir tecnología sin contexto: es <em class="hl">entender el proceso primero</em> y resolver el circuito en su conjunto.</p>
+    <h1 class="r" style="--i:1">El primer paso: un diagnóstico corto.</h1>
+    <p class="lead r" style="--i:2">Si algo de esto describe su operación, el siguiente paso no es elegir tecnología sin contexto: es <em class="hl">entender el proceso primero</em> y resolver el circuito en su conjunto.</p>
 
     <div class="stepbox r" style="--i:3">
       <div class="lab">El primer paso</div>
-      <p>Tomamos <b>la última operación real</b> —la última factura, el último lote despachado o el último contenedor movido— y la recorremos de punta a punta.</p>
+      <p>Se toma <b>la última operación real</b> —la última factura, el último lote despachado o el último contenedor movido— y se recorre de punta a punta.</p>
       <div class="stepbox-details">
         <div class="dt">Qué incluye</div>
         <p>Una reunión inicial sobre un caso real, mapa del proceso por escrito, estimación de impacto en tiempo y costo, y propuesta de alcance para el primer circuito. <b>Sin costo ni compromiso de continuidad.</b></p>
@@ -462,7 +451,8 @@
     </div>
 
     <div class="contact-mobile r" style="--i:4">
-      <div class="contact-name">Ezequiel Argüello</div>
+      <div class="contact-brand">κατ' ὄναρ</div>
+      <div class="contact-name">— Ezequiel Argüello</div>
       <div class="contact-lines-m">
         <div class="row">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -485,7 +475,7 @@
 <div class="nav">
   <div class="dots" id="dots"></div>
   <div class="arrows">
-    <span class="count" id="count">01 / 10</span>
+    <span class="count" id="count">01 / 09</span>
     <button class="ab" id="prev" aria-label="Anterior">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
     </button>
@@ -544,7 +534,6 @@
     if(e.key==='End'){go(total-1)}
   });
 
-  // touch swipe (horizontal-only)
   let x0=null,y0=null;
   document.addEventListener('touchstart',e=>{
     x0=e.touches[0].clientX;
