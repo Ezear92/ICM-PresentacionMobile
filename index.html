@@ -29,7 +29,7 @@
     --sans:'Hanken Grotesk',system-ui,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-  html,body{height:100%;width:100%;overflow:hidden}
+  html,body{height:100%;height:-webkit-fill-available;width:100%;overflow:hidden}
   body{
     font-family:var(--sans);background:var(--cream);color:var(--ink);
     -webkit-font-smoothing:antialiased;
@@ -46,13 +46,14 @@
   .progress{position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:30;transition:width .5s cubic-bezier(.4,0,.1,1)}
 
   /* brand top */
-  .brand{position:fixed;top:14px;left:18px;z-index:30;font-family:var(--serif);font-style:italic;
-    font-size:13px;color:var(--gold);letter-spacing:.03em}
+  .brand{position:fixed;top:14px;right:18px;z-index:30;font-family:var(--serif);font-style:italic;
+    font-size:13px;color:var(--gold);letter-spacing:.03em;
+    background:var(--cream);padding:2px 6px;border-radius:4px}
 
   /* deck */
-  .deck{position:relative;z-index:2;width:100vw;height:100vh;overflow:hidden}
+  .deck{position:relative;z-index:2;width:100vw;height:100vh;height:100dvh;overflow:hidden}
   .slide{position:absolute;inset:0;
-    padding:48px 22px 84px;
+    padding:48px 22px calc(100px + env(safe-area-inset-bottom));
     opacity:0;visibility:hidden;
     transform:translateX(20px);
     transition:opacity .45s ease, transform .45s cubic-bezier(.2,.75,.2,1), visibility .45s;
@@ -201,9 +202,11 @@
   .contact-lines-m .ico{width:14px;height:14px;color:var(--gold);flex:none;opacity:.7}
 
   /* ---------- NAV ---------- */
-  .nav{position:fixed;bottom:0;left:0;right:0;z-index:30;height:60px;
+  .nav{position:fixed;bottom:0;left:0;right:0;z-index:30;
     display:flex;align-items:center;justify-content:space-between;
-    padding:0 18px;background:linear-gradient(to top,var(--cream) 65%,transparent)}
+    padding:0 18px;padding-bottom:env(safe-area-inset-bottom);
+    min-height:60px;height:calc(60px + env(safe-area-inset-bottom));
+    background:linear-gradient(to top,var(--cream) 75%,transparent)}
   .dots{display:flex;gap:6px;align-items:center;flex:1;justify-content:center}
   .dot{width:6px;height:6px;border-radius:3px;background:var(--line);border:none;cursor:pointer;transition:all .3s;padding:0}
   .dot.on{width:18px;background:var(--gold)}
